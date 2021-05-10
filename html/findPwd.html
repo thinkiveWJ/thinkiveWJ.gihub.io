@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>找回密码</title>
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+  <div class="login-bg relative">
+    <div class="container white-bg login-box border-radius14 absolute-center">
+      <!-- logo -->
+      <div class="logo clearfix ml37 mt45">
+        <img class="pull-left" src="../imgs/logo.png" alt="logo">
+        <div class="pull-left ml27 lh25">
+          <div>解决企业经营难题</div>
+          <div class="gray">让老板经营企业更简单</div>
+        </div>
+      </div>
+
+      <!-- login内容部分 -->
+      <div class="clearfix edit-pwd">
+        <div class="pull-left w737 mt80">
+          <img class="login-pic" src="../imgs/login_pic01.png" alt="">
+        </div>
+        <div class="pull-left w396">
+          <!-- 标题 -->
+          <div class="title clearfix fn28">
+            <a href="" class="pull-left pb10">忘记密码</a>
+          </div>
+          <!-- form表单 -->
+          <form class="login-form mt37">
+            <div class="item username relative">
+              <input type="text" class="ptb8 fn16 block" placeholder="请输入您的手机号"/>
+            </div> 
+            <div class="item relative code"> 
+              <input type="text" class="ptb8 fn16 block" placeholder="请输入验证码"/>
+              <!-- 获取验证码 -->
+              <a href="" class="theme tel-code">获取验证码</a>
+            </div>
+            <div class="item password relative">
+              <input type="password" class="ptb8 fn16 block" placeholder="请输入您的新密码"/>
+            </div> 
+            <div class="item relative password"> 
+              <input type="password" class="ptb8 fn16 block" placeholder="请再次输入您的新密码"/>
+            </div>
+            
+            <a href="" class="mt43 block theme-bg login-btn white fn18 text-center">确认</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../plugins/code/code.js"></script>
+  <script>
+    $(function(){
+      // 点击发送验证码
+      $("a.tel-code").click(function(e){
+        e.preventDefault();
+        Code.send(this);
+      });
+    });
+  </script>
+</body>
+</html>
